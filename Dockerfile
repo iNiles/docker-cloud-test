@@ -1,2 +1,2 @@
 FROM ubuntu:xenial
-docker build .
+Docker build .
