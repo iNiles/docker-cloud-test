@@ -1,2 +1,3 @@
 FROM ubuntu:xenial
-docker build .
+COPY . /src
+WORKDIR /src
