@@ -6,5 +6,5 @@ app=Flask(__name__)
 def hello_world():
   return 'UNH698 Website'
 
-if__name__ == '__main__':
+if __name__ == '__main__':
   unittest.main()
