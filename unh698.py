@@ -1,10 +1,14 @@
-from flask import Flask
-app=Flask(__name__)
+from flask import Flask, render_template
+app = Flask(__name__)
 
 @app.route('/')
+def mainRoute():
+    return render_template('index.html')
 
-def hello_world():
-  return 'UNH698 Website'
+@app.route('/mypage')
+def computer():
+    return render_template('mypage.html')
 
 if __name__ == '__main__':
-  unittest.main()
+    app.run(debug=True,host='0.0.0.0', port=5000)
+    
