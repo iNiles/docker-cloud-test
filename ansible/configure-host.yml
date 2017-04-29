@@ -6,5 +6,6 @@
 - name: Install the community edition of docker
   hosts: localhost
   become: true
-  roles: -docker
+  roles: 
+    -docker
  
