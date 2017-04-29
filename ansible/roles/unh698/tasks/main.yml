@@ -18,7 +18,7 @@
     command: "{{ unh698_command }}"
     state: started
     ports:
-     - "{{ unh698_host_port }}:{{ unh698_container_port }}"
+     - "{{ unh698_host_port }}:{{ unh698_container_port }}"    
 
 # This should check that the container that is started in the last step
 # is up and running by checking the localhost's webpage.
@@ -28,5 +28,6 @@
 #   http://docs.ansible.com/ansible/uri_module.html
 - name: verify that webserver is running
   uri:
-    url: xxxxxxx
+    url: http://{{ my_AWS_IP }}:{{ unh698_host_port }}
     method: GET
+    status_code: 200
