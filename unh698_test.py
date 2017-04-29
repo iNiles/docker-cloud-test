@@ -23,7 +23,7 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_my_topic(self):
         rv = self.app.get('/secondpage')  
-        assert b'poptart' in rv.data 
+        assert b'other' in rv.data 
 
 
 if __name__ == '__main__':
