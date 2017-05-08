@@ -12,10 +12,18 @@ class FlaskrTestCase(unittest.TestCase):
         pass
 
     def test_home_page(self):
-        # Render the / path of the website
+        # Render the path
         rv = self.app.get('/')
-        # Chech that the page contians the desired phrase
+        # search for phrase
         assert b'UNH698 Website' in rv.data
+        
+    def test_link_to_my_page(self):
+        rv = self.app.get('/')  
+        assert b'secondpage' in rv.data 
+
+    def test_my_topic(self):
+        rv = self.app.get('/secondpage')  
+        assert b'other' in rv.data 
 
 
 if __name__ == '__main__':

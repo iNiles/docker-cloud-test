@@ -8,3 +8,4 @@ python3-pip
  
 RUN pip3 install Flask==0.12
 
+EXPOSE 5000 
